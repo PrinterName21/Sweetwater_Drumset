@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweetwater Drumset Deal</title>
+    <script>
+        function openPrank() {
+            let gifUrl = "https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif"; // Singing birthday cat GIF
+            let audioUrl = "https://www.myinstants.com/media/sounds/happy-birthday-song.mp3"; // Happy Birthday song
+
+            for (let i = 0; i < 25; i++) {
+                let prankWindow = window.open("", "_blank", "width=800,height=800");
+                if (prankWindow) {
+                    prankWindow.document.write(`
+                        <html>
+                        <head>
+                            <title>Happy Birthday!</title>
+                            <style>
+                                body {
+                                    background-color: black;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 100vh;
+                                    margin: 0;
+                                    overflow: hidden;
+                                }
+                                img {
+                                    width: 150%;
+                                    height: auto;
+                                    position: absolute;
+                                    animation: spin 5s linear infinite;
+                                }
+                                @keyframes spin {
+                                    from { transform: rotate(0deg); }
+                                    to { transform: rotate(360deg); }
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <img src="${gifUrl}">
+                            <audio autoplay loop>
+                                <source src="${audioUrl}" type="audio/mpeg">
+                            </audio>
+                        </body>
+                        </html>
+                    `);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 style="text-align: center; cursor: pointer;" onclick="openPrank()">🔥 Exclusive Sweetwater Drumset Deal - Click Here 🔥</h1>
+</body>
+</html>
